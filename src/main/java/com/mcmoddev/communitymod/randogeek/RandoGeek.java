@@ -6,8 +6,6 @@ import com.mcmoddev.communitymod.SubMod;
 import com.mcmoddev.communitymod.shared.ClientUtil;
 import com.mcmoddev.communitymod.shared.RegUtil;
 
-import geek.aperturescience.init.ApertureScienceBlocks;
-import geek.aperturescience.init.ApertureScienceItems;
 import net.minecraft.entity.passive.HorseArmorType;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
