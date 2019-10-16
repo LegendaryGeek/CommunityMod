@@ -3,13 +3,17 @@ package com.mcmoddev.communitymod.randogeek;
 import com.mcmoddev.communitymod.CommunityGlobals;
 import com.mcmoddev.communitymod.ISubMod;
 import com.mcmoddev.communitymod.SubMod;
+import com.mcmoddev.communitymod.shared.ClientUtil;
 import com.mcmoddev.communitymod.shared.RegUtil;
 
+import geek.aperturescience.init.ApertureScienceBlocks;
+import geek.aperturescience.init.ApertureScienceItems;
 import net.minecraft.entity.passive.HorseArmorType;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -47,4 +51,19 @@ public class RandoGeek implements ISubMod {
 		RegUtil.registerItem(reg, ModItems.IceAxe, "iceaxe");
 		RegUtil.registerItem(reg, ModItems.ForkedApple, "forkedapple");
 	}
+	
+	@SubscribeEvent
+	public void registerModels(final ModelRegistryEvent event) {
+		ClientUtil.simpleItemModel(ModItems.ForkedApple);
+		ClientUtil.simpleItemModel(ModItems.IceAxe);
+		ClientUtil.simpleItemModel(ModItems.IceBooties);
+		ClientUtil.simpleItemModel(ModItems.IceChestplate);
+		ClientUtil.simpleItemModel(ModItems.IceHelm);
+		ClientUtil.simpleItemModel(ModItems.IceHoe);
+		ClientUtil.simpleItemModel(ModItems.IceLegs);
+		ClientUtil.simpleItemModel(ModItems.IcePickaxe);
+		ClientUtil.simpleItemModel(ModItems.IceSpade);
+		ClientUtil.simpleItemModel(ModItems.IceSword);
+	}
+
 }
